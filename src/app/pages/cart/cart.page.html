@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Market</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="cartItems.length === 0" class="watermark">
+    <ion-icon name="cart-outline" class="watermark-icon"></ion-icon>
+    <p class="watermark-text">Carrito vacio</p>
+  </div>
+
+  <ion-list lines="full" *ngIf="cartItems.length > 0">
+    <ion-item *ngFor="let item of cartItems">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" [alt]="item.title" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+        <p>$ {{ item.price.toFixed(2) }}</p>
+      </ion-label>
+      <ion-button
+        fill="clear"
+        slot="end"
+        (click)="removeFromCart(item)"
+        class="delete-button"
+      >
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer *ngIf="cartItems.length > 0">
+  <ion-toolbar>
+    <ion-title>Total: ${{ totalAmount.toFixed(2) }}</ion-title>
+  </ion-toolbar>
+  <ion-button expand="block" (click)="simulatePayment()" class="payment-button">
+    Realizar compra
+  </ion-button>
+</ion-footer>

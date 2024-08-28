@@ -1,0 +1,27 @@
+<ion-header>
+  <app-toolbar> </app-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="product-container" *ngIf="products">
+    <ion-button class="close-button" fill="clear" (click)="cerrarPagina()">
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-button>
+    <h1>{{products.title}}</h1>
+    <img [src]="products.image" alt="{{products.title}}" />
+    <div class="product-info">
+      <p class="category">{{products.category}}</p>
+      <p class="price">{{products.price | currency:'USD'}}</p>
+    </div>
+    <h2>Description</h2>
+    <p class="description">{{products.description}}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="agregar" expand="full" (click)="agregarAlCarrito()"
+      >Agregar al carrito</ion-button
+    >
+  </ion-toolbar>
+</ion-footer>

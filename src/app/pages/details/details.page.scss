@@ -1,0 +1,121 @@
+/* Contenedor principal del producto */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  background: #ffffff;
+  border-radius: 8px; /* Bordes redondeados para suavizar el diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  padding: 16px;
+}
+
+/* Botón de cierre */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  --padding-start: 0;
+  --padding-end: 0;
+  --color: #666666;
+  font-size: 1.2rem;
+  cursor: pointer; /* Añade el cursor pointer para indicar que es clicable */
+}
+
+/* Título principal */
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333333; /* Color más oscuro para mejorar la legibilidad */
+}
+
+/* Imagen del producto */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Bordes redondeados para que la imagen se integre mejor */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la imagen */
+}
+
+/* Información del producto (categoría y precio) */
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 8px;
+}
+
+/* Categoría del producto */
+.category {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Precio del producto */
+.price {
+  font-weight: bold;
+  color: #000000; /* Color que combina con el diseño general */
+}
+
+/* Subtítulo (por ejemplo, nombre del producto) */
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  color: #333333; /* Color oscuro para mejor contraste */
+}
+
+/* Descripción del producto */
+.description {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555555; /* Color intermedio para mejor legibilidad */
+}
+
+/* Estilos del footer */
+ion-footer {
+  ion-toolbar {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --min-height: 56px;
+    --background: #ffffff;
+    --border-style: none;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad al footer */
+  }
+
+  .agregar {
+    margin: 0;
+    --background: #042a5c;
+    --color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    transition: background 0.3s; /* Transición suave al cambiar el fondo */
+  }
+
+  .agregar:hover {
+    --background: #031b44; /* Color más oscuro al pasar el mouse */
+  }
+}
+
+/* Estilos del Toast personalizado */
+.custom-toast {
+  --background: #042a5c;
+  --color: white;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el toast */
+}
+

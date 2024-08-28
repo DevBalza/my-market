@@ -1,2 +1,22 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+img {
+
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+
+}
+
+body{
+  background: #111 ;
+  display: grid;
+  padding-block: 128px;
+  place-content: center;
+  gap: 8px;
+
+}
+
+
